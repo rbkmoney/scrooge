@@ -13,15 +13,34 @@ management:
     health:
       show-details: always
 
+info:
+  version: '@project.version@'
+  stage: dev
+
 spring:
   application:
     name: '@project.name@'
   output:
     ansi:
       enabled: always
-info:
-  version: '@project.version@'
-  stage: dev
+  jpa:
+    database: postgresql
+    properties:
+      hibernate:
+        jdbc:
+          batch_size: 1000
+        default_schema: bukiper
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://changeit:5432/bukiper
+    username: changeit
+    password: changeit
+  flyway:
+    schemas: bukiper
+    url: jdbc:postgresql://changeit:5432/bukiper
+    user: changeit
+    password: changeit
 
 kafka:
   bootstrap-servers: changeit:9092
