@@ -9,7 +9,9 @@ management:
       statsd:
         enabled: false
         flavor: etsy
-  endpoint.health.show-details: always
+  endpoint:
+    health:
+      show-details: always
 
 spring:
   application:
@@ -20,3 +22,24 @@ spring:
 info:
   version: '@project.version@'
   stage: dev
+
+kafka:
+  bootstrap-servers: changeit:9092
+  consumer:
+    group-id: bukiper
+    concurrency: 7
+  max-poll-records: 100
+  max-poll-interval-ms: 60000
+  max-session-timeout-ms: 60000
+  ssl:
+    enabled: false
+    key-store-type: changeit
+    key-store-location: changeit
+    key-password: changeit
+    trust-store-type: changeit
+    trust-store-location: changeit
+    trust-store-password: changeit
+  topic:
+    name: operation-log
+    listener:
+      enabled: false
