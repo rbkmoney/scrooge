@@ -1,4 +1,4 @@
-package com.rbkmoney.bukiper.listener;
+package com.rbkmoney.scrooge.listener;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

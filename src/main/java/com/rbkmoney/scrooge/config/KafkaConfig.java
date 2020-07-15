@@ -1,7 +1,7 @@
-package com.rbkmoney.bukiper.config;
+package com.rbkmoney.scrooge.config;
 
 import com.fasterxml.jackson.databind.deser.std.StringDeserializer;
-import com.rbkmoney.bukiper.config.properties.KafkaSslProperties;
+import com.rbkmoney.scrooge.config.properties.KafkaSslProperties;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.kafka.clients.CommonClientConfigs;

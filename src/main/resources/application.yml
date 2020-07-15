@@ -29,23 +29,23 @@ spring:
       hibernate:
         jdbc:
           batch_size: 1000
-        default_schema: bukiper
+        default_schema: scrooge
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
     driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://changeit:5432/bukiper
+    url: jdbc:postgresql://changeit:5432/scrooge
     username: changeit
     password: changeit
   flyway:
-    schemas: bukiper
-    url: jdbc:postgresql://changeit:5432/bukiper
+    schemas: scrooge
+    url: jdbc:postgresql://changeit:5432/scrooge
     user: changeit
     password: changeit
 
 kafka:
   bootstrap-servers: changeit:9092
   consumer:
-    group-id: bukiper
+    group-id: scrooge
     concurrency: 7
   max-poll-records: 100
   max-poll-interval-ms: 60000

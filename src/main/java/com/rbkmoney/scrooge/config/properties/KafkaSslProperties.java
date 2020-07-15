@@ -1,4 +1,4 @@
-package com.rbkmoney.bukiper.config.properties;
+package com.rbkmoney.scrooge.config.properties;
 
 import lombok.Getter;
 import lombok.Setter;
