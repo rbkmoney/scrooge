@@ -1,4 +1,4 @@
-package com.rbkmoney.bukiper;
+package com.rbkmoney.scrooge;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -6,10 +6,10 @@ import org.springframework.boot.web.servlet.ServletComponentScan;
 
 @ServletComponentScan
 @SpringBootApplication
-public class BukiperApplication extends SpringApplication {
+public class ScroogeApplication extends SpringApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(BukiperApplication.class, args);
+        SpringApplication.run(ScroogeApplication.class, args);
     }
 
 }

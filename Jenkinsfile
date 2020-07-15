@@ -1,5 +1,5 @@
 #!groovy
-build('bukiper', 'java-maven') {
+build('scrooge', 'java-maven') {
     checkoutRepo()
     loadBuildUtils()
 

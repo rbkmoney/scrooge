@@ -9,11 +9,11 @@
         <version>2.3.0.RELEASE-2</version>
     </parent>
 
-    <artifactId>bukiper</artifactId>
+    <artifactId>scrooge</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>Bukiper</name>
+    <name>Scrooge</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
