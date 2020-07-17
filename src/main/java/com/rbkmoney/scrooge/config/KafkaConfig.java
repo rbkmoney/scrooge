@@ -1,12 +1,14 @@
 package com.rbkmoney.scrooge.config;
 
-import com.fasterxml.jackson.databind.deser.std.StringDeserializer;
+import com.rbkmoney.damsel.shumaich.OperationLog;
 import com.rbkmoney.scrooge.config.properties.KafkaSslProperties;
+import com.rbkmoney.scrooge.kafka.serde.OperationLogDeserializer;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.kafka.clients.CommonClientConfigs;
 import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.apache.kafka.common.config.SslConfigs;
+import org.apache.kafka.common.serialization.StringDeserializer;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;

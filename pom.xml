@@ -25,6 +25,7 @@
         <dockerfile.registry>${env.REGISTRY}</dockerfile.registry>
         <shared.resources.version>0.3.6</shared.resources.version>
         <kafka.common.lib.version>0.0.9</kafka.common.lib.version>
+        <shumaich.proto.version>1.38-9f82af1</shumaich.proto.version>
         <sonar.jacoco.reportPaths>${project.basedir}/target/jacoco.exec</sonar.jacoco.reportPaths>
     </properties>
 
@@ -54,6 +55,11 @@
             <groupId>com.rbkmoney</groupId>
             <artifactId>kafka-common-lib</artifactId>
             <version>${kafka.common.lib.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.rbkmoney</groupId>
+            <artifactId>shumaich-proto</artifactId>
+            <version>${shumaich.proto.version}</version>
         </dependency>
 
         <!--spring-->
