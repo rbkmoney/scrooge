@@ -1,6 +1,7 @@
 package com.rbkmoney.scrooge.kafka.listener;
 
 import com.rbkmoney.damsel.shumaich.OperationLog;
+import com.rbkmoney.scrooge.handler.OperationLogHandler;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.kafka.annotation.KafkaListener;
@@ -16,6 +17,8 @@ import java.util.List;
 @RequiredArgsConstructor
 public class OperationLogListener {
 
+    private final OperationLogHandler handler;
+
     @KafkaListener(
             autoStartup = "${kafka.topic.operation-log.listener.enabled}",
             topics = "${kafka.topic.operation-log.name}",
@@ -26,7 +29,7 @@ public class OperationLogListener {
             @Header(KafkaHeaders.OFFSET) int offset,
             Acknowledgment ack) {
         log.info("Listening OperationLog: partition={}, offset={}, batch.size()={}", partition, offset, batch.size());
-//        handleMessages(batch);
+        handler.handle(batch);
         ack.acknowledge();
     }
 }
