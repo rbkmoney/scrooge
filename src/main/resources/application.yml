@@ -37,10 +37,14 @@ spring:
     username: changeit
     password: changeit
   flyway:
+    table: schema_version
     schemas: scrooge
     url: jdbc:postgresql://changeit:5432/scrooge
     user: changeit
     password: changeit
+
+hibernate:
+  physical_naming_strategy: com.rbkmoney.scrooge.entity.naming.SnakeCaseNamingStrategy
 
 kafka:
   bootstrap-servers: changeit:9092
