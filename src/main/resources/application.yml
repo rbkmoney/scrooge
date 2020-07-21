@@ -63,6 +63,7 @@ kafka:
     trust-store-location: changeit
     trust-store-password: changeit
   topic:
-    name: operation-log
-    listener:
-      enabled: false
+    operation-log:
+      name: operation-log
+      listener:
+        enabled: false
