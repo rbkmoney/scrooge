@@ -31,5 +31,6 @@ public class OperationLogListener {
         log.info("Listening OperationLog: partition={}, offset={}, batch.size()={}", partition, offset, batch.size());
         handler.handle(batch);
         ack.acknowledge();
+        log.info("Ack: partition={}, offset={}", partition, offset);
     }
 }
