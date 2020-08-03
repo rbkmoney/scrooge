@@ -10,7 +10,7 @@ CREATE TABLE IF NOT EXISTS scrooge.operation_log
     sequence_id            BIGINT                      NOT NULL,
     plan_operations_count  BIGINT                      NOT NULL,
     operation_type         scrooge.operation_type      NOT NULL,
-    account_id             CHARACTER VARYING           NOT NULL,
+    account_id             BIGINT                      NOT NULL,
     amount_with_sign       BIGINT                      NOT NULL,
     currency_symbolic_code CHARACTER VARYING           NOT NULL,
     description            CHARACTER VARYING           NOT NULL,

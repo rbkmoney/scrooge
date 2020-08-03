@@ -34,7 +34,7 @@ public class OperationLogEntity implements Serializable {
     @Type(type = "pgsql_enum")
     private ValidationError validationError;
 
-    private String accountId;
+    private Long accountId;
     private Long amountWithSign;
     private String currencySymbolicCode;
     private String description;

@@ -81,7 +81,7 @@ public class OperationLogRepositoryTest {
                     .creationTime(LocalDateTime.now())
                     .batchHash(9999L)
                     .amountWithSign(-100L)
-                    .accountId("account_id")
+                    .accountId(1L)
                     .build();
 
             entities.add(entity);
